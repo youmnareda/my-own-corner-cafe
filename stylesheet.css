@@ -1,0 +1,814 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url(image/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Playfair Display', serif;
+}
+
+/*********************** Header *******************/
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+header li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header li a:hover {
+    color: rgb(126, 126, 76);
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(126, 126, 76);
+    font-family: 'Preahvihear', sans-serif;
+    font-weight: 400;
+}
+
+nav .links {
+    display: flex;
+    gap: 2rem;
+
+}
+
+nav .toggle {
+    color: rgb(126, 126, 76);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action {
+    /* background-color: orange; */
+    /* background-color: black; */
+    color: #fff;
+    /* border: none; */
+    padding: 0.5rem 1rem;
+    /* outline: none;*/
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    /* transition: scale 0.2s ease; */
+    transition: 0.7s ease;
+    color: whitesmoke;
+    background-color: rgb(126, 126, 76);
+    border: 1px solid rgb(126, 126, 76);
+    border-radius: 20px;
+}
+
+.action:hover {
+    /* scale: 1.05; */
+    /* color: white; */
+    background-color: black;
+    transform: scale(1.1);
+}
+
+.action:active {
+    /* scale: 0.95; */
+    background-color: black;
+    transform: scale(1.1);
+}
+
+
+/**************** Dropdown Menu ************/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    /********/
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    /*******************/
+    border-radius: 10px;
+    overflow: hidden;
+    /*************/
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/************** Nav Media Query ***************/
+@media (max-width: 992px) {
+
+    nav .links,
+    nav .action {
+        display: none;
+    }
+
+    nav .toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+/***************** explain/search **************/
+@media (max-width: 992px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+        /***/
+    }
+}
+
+/******************************************************************/
+/*************************** Main ***********************/
+.pre1 {
+    color: rgb(126, 126, 76);
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 200px;
+    margin-left: -180px;
+}
+
+.pre2 {
+    color: rgb(126, 126, 76);
+    margin-left: 70px;
+    font-family: 'Kalnia', serif;
+    font-weight: 400;
+}
+
+.main-btn,
+.main2-btn {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.8em 1.9em;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    transition: 0.7s ease;
+    margin-left: 200px;
+    border: 1px solid rgb(126, 126, 76);
+}
+
+.main2-btn {
+    margin-left: 20px;
+}
+
+.main-btn:hover {
+    background-color: rgb(126, 126, 76);
+    transform: scale(1.1);
+}
+
+.main2-btn:hover {
+    background-color: rgb(126, 126, 76);
+    transform: scale(1.1);
+}
+
+/********************************/
+/********************** About Us ***********************/
+.cafe-details {
+    display: flex;
+    justify-content: center;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin-top: 60px;
+}
+
+.paragraph-detail {
+    color: aliceblue;
+    width: 550px;
+    height: 453px;
+    margin: 30px;
+    padding-top: 70px;
+}
+.paragraph-detail h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+.paragraph-detail h4 {
+    margin: 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.paragraph-detail p {
+    margin: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Whisper', cursive;
+}
+
+.paragraph-detail span{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 16;
+}
+.photo-detail img {
+    width: 550px;
+    height: 450px;
+    border: 4px solid rgb(73, 71, 71);
+    margin: 30px;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.photo-detail img:hover {
+    scale: 1.05;
+}
+
+.photo-detail img:active {
+    scale: 0.95;
+}
+
+/********************** details media *****************/
+@media (max-width: 992px) {
+    .all {
+        flex-direction: column-reverse;
+    }
+
+    .paragraph-detail {
+        width: 320px;
+        height: 300px;
+        margin: 30px;
+    }
+
+    .photo-detail img {
+        width: 300px;
+        height: 300px;
+        border: 3px solid rgb(73, 71, 7);
+    }
+}
+
+/*********************************************************/
+/******************** why choose ********************/
+.why-us .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -80px;
+}
+
+.card1 {
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    /* opacity: 50%; */
+    margin: 20px;
+    padding: 30px;
+    /* text-align: justify; */
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+.card1 h1 {
+    margin-bottom: 15px;
+}
+.card2 h3{
+    margin: 15px 0;
+}
+.card1 p, .card2 p {
+    font-family: 'Whisper', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card2 {
+    width: 220px;
+    height: 300px;
+    background-color: #CDB8BA;
+    margin: 20px;
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+    transition: scale 0.2s ease;
+    border-radius: 10px;
+}
+
+.card1 a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.8em 1.9em;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transition: 0.7s ease;
+    border: 1px solid rgb(126, 126, 76);
+    margin-top: 25px;
+    color: #fff;
+}
+
+.card1 a:hover {
+    background-color: rgb(126, 126, 76);
+    transform: scale(1.1);
+    color: black;
+}
+
+.card2:hover {
+    scale: 1.10;
+}
+
+.card2:active {
+    scale: 0.95;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(165, 42, 42, 0.415);
+    /* opacity: 0.3; */
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************** why-us media *****************/
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 400px;
+    }
+
+    .card1 {
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .card2 {
+        width: 300px;
+        height: 250px;
+        margin: 20px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .card2:hover {
+        scale: 1.05;
+    }
+
+    .card2:active {
+        scale: 0.95;
+    }
+}
+
+/************* slider *************/
+.comments {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.image {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonial .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    /*space between tags*/
+}
+
+.slide p {
+    padding: 0 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.slide .test-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-paragraph .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.test-paragraph .job {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.checked {
+    color: orange;
+}
+
+.test-paragraph .rating span {
+    margin: 5px;
+}
+
+.test-paragraph .rating .rate {
+    color: #fff;
+    font-weight: bold;
+    margin-left: -45px;
+}
+
+/*********************************/
+/*************** menu ************/
+/********* menu header ********/
+.menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-content header h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.menu-content header {
+    margin: 70px;
+}
+
+.buttons button {
+    margin: 10px;
+}
+
+.buttons button {
+    background-color: #828258;
+    border: none;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.buttons button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/**************** menu items *************/
+.food-content h2 {
+    /*common*/
+    margin: 0 0 -50px 150px;
+    color: orange;
+}
+
+.menu-items {
+    /*common*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-photo img {
+    /*common*/
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.menu-photo img {
+    /*common*/
+    width: 450px;
+    height: 450px;
+}
+
+.menu-item {
+    /*common*/
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    /*space between product and item photo*/
+}
+
+.menu-product {
+    /*common*/
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    /*space between products*/
+}
+
+.menu-details {
+    /*common*/
+    margin: 15px 0 0 10px;
+    color: #fff;
+}
+
+.menu-details .price {
+    /*common*/
+    margin-left: 50px;
+    color: orange;
+}
+
+.menu-details .title {
+    /*common*/
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu-details p , .drinks-details p{
+    font-family: 'Whisper', cursive;
+    font-size: 20px;
+}
+/************* hot drinks **********/
+.drinks-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.drinks-item {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    /*space between product and item photo*/
+}
+
+.drinks-product {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    /*space between products*/
+}
+
+.drinks-details {
+    margin: 15px -250px 0 10px;
+    color: #fff;
+}
+
+.drinks-details .price {
+    margin-left: 50px;
+    color: orange;
+}
+
+.drinks-details .title {
+    font-weight: bold;
+}
+
+/************************** contact **********************/
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.contact-info {
+    padding: 40px;
+}
+
+.info {
+    display: flex;
+    margin: 30px;
+}
+
+.contact-info h3 {
+    color: whitesmoke;
+    /* margin-left: 250px;
+    margin-top: 100px; */
+    font-size: 25px;
+    margin-left: 45px;
+}
+
+.info img {
+    margin: 10px;
+}
+
+.info p {
+    color: rgb(176, 166, 166);
+    /* margin-left: 280px;
+    margin-top: 20px; */
+    font-size: 20px;
+}
+
+.info span {
+    color: #eee;
+}
+
+.info a {
+    text-decoration: none;
+    color: #eee;
+}
+
+/************************************/
+.contact-feedback form {
+    background-color: black;
+    width: 340px;
+    height: 480px;
+    border-radius: 15px;
+}
+
+.contact-feedback form h2 {
+    color: rgb(126, 126, 76);
+    padding-top: 40px;
+    /* padding-left: 30px; */
+    text-align: left;
+    margin-left: 30px;
+}
+
+.contact-feedback input,
+textarea {
+    border-radius: 10px;
+    border: 2px solid rgb(126, 126, 76, 85%);
+}
+
+.contact-feedback input {
+    /* margin: 10px 10px 5px 10px; */
+    margin: 15px 0 0 30px;
+    padding: 5px 0 0 10px;
+    width: 277px;
+    height: 40px;
+}
+
+.contact-feedback textarea {
+    margin: 17px 0 0 30px;
+    padding: 7px 0 0 10px;
+    font-size: 16px;
+    height: 150px;
+    width: 275px;
+}
+
+.contact-feedback.name {
+    margin-top: 20px;
+}
+
+.contact-feedback button {
+    color: whitesmoke;
+    background-color: rgb(126, 126, 76);
+    border: 1px solid rgb(126, 126, 76);
+    border-radius: 25px;
+    padding: 0.8em 1.9em;
+    margin: 18px 0 0 80px;
+    /* margin-top: 18px;
+    margin-left: 80px; */
+    font-size: 15px;
+    transition: 0.7s ease;
+}
+
+.contact-feedback button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+/*********************************************/
+/****************booking***************/
+.booking-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+}
+.booking-header h5{
+    color:whitesmoke;
+    letter-spacing: 1.8px;
+    margin: 40px 0 0 90px;
+}
+.booking-header h1{
+    color: rgb(126, 126, 76);
+    padding: 17px  0  20px  0;
+    margin-left: 70px;    
+}
+
+h5:after{ 
+    content: "";
+    display: block;
+    width: 165px;
+    height: 1px;
+    background-color: rgb(126, 126, 76);
+    opacity: 50%;
+    position: absolute;
+    left: 16%;
+    top: 15%;
+}
+.booking-header{
+    margin-top: -330px;
+}
+.book-table{
+    margin: 190px  0  0  -108px;
+}
+.book-table input[type="text"], .book-table input[type="email"],
+ .book-table input[type="number"], .book-table input[type="date"], 
+ .book-table input[type="time"]{
+    margin-right: 10px;
+    width: 380px;
+    height: 45px;
+    padding-left: 10px;
+    background-color: black;
+}
+.book-table input[type="date"], .book-table input[type="time"]{
+    color: rgb(133, 127, 127);
+    font-size: 15px;
+    margin-top: 25px;
+}
+.book-table textarea{
+    margin: 25px  10px  0  0;
+    width: 1168px;
+    height: 150px;
+    padding: 10px  0  0  10px;
+    font-size: large;
+    background-color: black;
+}
+.book-table button{
+    color: whitesmoke;
+    background-color: rgb(126, 126, 76);
+    border: 1px solid rgb(126, 126, 76);
+    border-radius: 25px;
+    padding: 0.8em 1.9em;
+    margin: 25px  0  0  520px;
+    font-size: 15px;
+    transition: 0.7s ease;
+}
+.book-table button:hover{
+    background-color: black;
+    transform: scale(1.1);
+}
+/****************************************************/
+/* .content {
+    display: none;
+}
+*/
+.collection {
+    display: none;
+}
+
+.content-2{
+    display: none;
+}
+.content-2.active{
+    display: block;
+}
+
+/**************************************************/
